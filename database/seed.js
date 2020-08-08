@@ -19,16 +19,19 @@ const random = (min, max) => {
 const seedProducts = () => {
   for (let i = 0; i <= 200; i++) {
     let sku = `SKU${500+i}`;
-    let prodName = `${faker.name.findName()} ${name1[random(0,10)]} ${name2[random(0,4)]}`;
+    let prodName = `${name1[random(0,10)]} ${name1[random(0,10)]} ${name2[random(0,4)]}`;
     let prodDesc = faker.lorem.sentences();
-    let image = image[random(0,3)];
+    let image = images[random(0,3)];
     let price = reg[random(0,2)];
     let sprice = sale[random(0,2)];
     let type = cat[random(0,2)];
-    let postQuery = `INSERT INTO products (SKU, productName, productDetail, imagePath, regPrice, salePrice, productType) VALUES (${sku}, ${prodName}, ${prodDesc}, ${images}, ${price}, ${sprice}, ${type}`;
-    db.query(postQuery, (err, data) => {
+    let postQuery = `INSERT INTO products (SKU, productName, productDetail, imagePath, regPrice, salePrice, productType) VALUES ('${sku}', '${prodName}', '${prodDesc}', '${image}', ${price}, ${sprice}, '${type}')`;
+    console.log(postQuery)
+    db.connection.query(postQuery, (err, data) => {
       if (err) {
-        console.log(err)
+        console.log(`failed at product id ${i}`,err)
+      } else {
+        console.log(`added product id ${i}`)
       }
     })
   }
@@ -36,4 +39,4 @@ const seedProducts = () => {
 
 seedProducts();
 
-db.end()
+//db.end()

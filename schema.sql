@@ -13,12 +13,12 @@ CREATE TABLE shoes (
 CREATE TABLE products (
   id INT NOT NULL AUTO_INCREMENT UNIQUE,
   SKU VARCHAR(6) NOT NULL UNIQUE,
-  productName VARCHAR(40),
+  productName VARCHAR(50),
   productDetail VARCHAR(1000),
   imagePath VARCHAR(254),
   regPrice DECIMAL(10,2),
   salePrice DECIMAL(10,2),
-  productType VARCHAR(20),
+  productType VARCHAR(30),
   PRIMARY KEY(id)
 );
 
@@ -49,7 +49,7 @@ CREATE TABLE products_by_size (
 /*     mysql -u root < schema.sql */
 
 INSERT INTO shoes (SKU) VALUES ('SKU001'),('SKU002'),('SKU003'),('SKU004'),('SKU005'),('SKU006'),('SKU007'),('SKU008'),('SKU009'),('SKU010'),('SKU011'),('SKU012'),('SKU013'),('SKU014'),('SKU015'),('SKU016'),('SKU017'),('SKU018'),('SKU019'),('SKU020'),('SKU021'),('SKU022'),('SKU023'),('SKU024'),('SKU025'),('SKU026'),('SKU027'),('SKU028'),('SKU029'),('SKU030'),('SKU031'),('SKU032'),('SKU033'),('SKU034'),('SKU035'),('SKU036'),('SKU037'),('SKU038'),('SKU039'),('SKU040'),('SKU041'),('SKU042'),('SKU043'),('SKU044'),('SKU045'),('SKU046'),('SKU047'),('SKU048'),('SKU049'),('SKU050'),('SKU051'),('SKU052'),('SKU053'),('SKU054'),('SKU055'),('SKU056'),('SKU057'),('SKU058'),('SKU059'),('SKU060'),('SKU061'),('SKU062'),('SKU063'),('SKU064'),('SKU065'),('SKU066'),('SKU067'),('SKU068'),('SKU069'),('SKU070'),('SKU071'),('SKU072'),('SKU073'),('SKU074'),('SKU075'),('SKU076'),('SKU077'),('SKU078'),('SKU079'),('SKU080'),('SKU081'),('SKU082'),('SKU083'),('SKU084'),('SKU085'),('SKU086'),('SKU087'),('SKU088'),('SKU089'),('SKU090'),('SKU091'),('SKU092'),('SKU093'),('SKU094'),('SKU095'),('SKU096'),('SKU097'),('SKU098'),('SKU099'),('SKU100');
-
+/*
 INSERT INTO products (SKU, productName, productDetail, imagePath, regPrice, salePrice, productType) VALUES ('SKU500', 'TRAINING 3-STRIPES TEE', 'PLACEHOLDER', 'PLACEHOLDER', 40.00, 28.00, 'Training');
 INSERT INTO products (SKU, productName, productDetail, imagePath, regPrice, salePrice, productType) VALUES ('SKU501', 'UNLEASH CONFIDENCE TEE', 'PLACEHOLDER', 'PLACEHOLDER', 28.00, NULL, 'Training');
 INSERT INTO products (SKU, productName, productDetail, imagePath, regPrice, salePrice, productType) VALUES ('SKU502', 'FLORAL GRAPHIC TEE', 'PLACEHOLDER', 'PLACEHOLDER', 25.00, NULL, 'Essentials');
@@ -104,3 +104,4 @@ INSERT INTO products (SKU, productName, productDetail, imagePath, regPrice, sale
 INSERT INTO products (SKU, productName, productDetail, imagePath, regPrice, salePrice, productType) VALUES ('SKU547', 'DOTS3 GRAPHIC TEE', 'PLACEHOLDER', 'PLACEHOLDER', 25.00, NULL, 'Essentials');
 INSERT INTO products (SKU, productName, productDetail, imagePath, regPrice, salePrice, productType) VALUES ('SKU548', 'OTHER3 3-STRIPES TEE', 'PLACEHOLDER', 'PLACEHOLDER', 35.00, NULL, 'Originals');
 INSERT INTO products (SKU, productName, productDetail, imagePath, regPrice, salePrice, productType) VALUES ('SKU549', 'BASICS3 TEE', 'PLACEHOLDER', 'PLACEHOLDER', 23.00, 18.00, 'Training');
+*/

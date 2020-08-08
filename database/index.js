@@ -16,4 +16,4 @@ var getAllShoes = function(callback) {
 
 
 
-module.exports.getAllShoes = getAllShoes;
+module.exports.connection = connection;
