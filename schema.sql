@@ -23,23 +23,27 @@ CREATE TABLE products (
 );
 
 CREATE TABLE products_by_shoe (
-  shoeSKU INT,
-  prodSKU INT,
-  FOREIGN KEY(shoeSKU) REFERENCES shoes(SKU)
-  FOREIGN KEY(prodSKU) REFERENCES products(SKU)
-  PRIMARY KEY(shoeSKU, prodSKU)
+  id INT NOT NULL AUTO_INCREMENT UNIQUE,
+  shoeSKU VARCHAR(6),
+  prodSKU VARCHAR(6),
+  FOREIGN KEY(shoeSKU) REFERENCES shoes(SKU),
+  FOREIGN KEY(prodSKU) REFERENCES products(SKU),
+  PRIMARY KEY(id)
 );
 
 CREATE TABLE sizes (
+  id INT NOT NULL AUTO_INCREMENT UNIQUE,
   size VARCHAR(4) UNIQUE,
-  PRIMARY KEY(size)
+  PRIMARY KEY(id)
 );
 
-CREATE TABLE products)by_size (
+CREATE TABLE products_by_size (
+  id INT NOT NULL AUTO_INCREMENT UNIQUE,
   size VARCHAR(4),
-  prodSKU INT,
-  FOREIGN KEY(size) REFERENCES sizes (size)
-  FOREIGN KEY(prodSKU) REFERENCES products(SKU)
+  prodSKU VARCHAR(6),
+  FOREIGN KEY(size) REFERENCES sizes (size),
+  FOREIGN KEY(prodSKU) REFERENCES products(SKU),
+  PRIMARY KEY(id)
 );
 
 /*     mysql -u root < schema.sql */
