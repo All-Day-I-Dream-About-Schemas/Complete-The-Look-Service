@@ -1,5 +1,5 @@
-//generate fake products
-//INSERT INTO products (SKU, productName, productDetail, imagePath, regPrice, salePrice, productType) VALUES ('SKU500', 'TRAINING 3-STRIPES TEE', 'PLACEHOLDER', 'PLACEHOLDER', 40.00, 28.00, 'Training');
+//generate fake data
+
 const db = require('./index.js');
 const faker = require('faker');
 
@@ -37,6 +37,22 @@ const seedProducts = () => {
   }
 }
 
+const createProdByShoe = () => {
+  //make a loop to insert 4 prod per 1 shoe
+  for (let i = 1; i <= 100; i++) {
+    //for every shoe sku, link 4 random product sku
+    let shoe = 'SKU'+
+    let four = []
+    for (let j = 1; j <= 4; j++) {
+      //prod sku range (500-700)
+      four.push(`SKU${random(500,700)}`)
+    }
+    let postQuery = `INSERT INTO products_by_shoe (shoeSKU, prodSKU) VALUES ()`
+  }
+    //insert into product_by_shoe table
+}
+
 seedProducts();
+createProdByShoe();
 
 //db.end()
