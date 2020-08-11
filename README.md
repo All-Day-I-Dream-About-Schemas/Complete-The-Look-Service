@@ -1,13 +1,13 @@
 # Project Name
 
-> Project description
+> Front End Capstone - Adidas Clone
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/All-Day-I-Dream-About-Schemas/Complete-The-Look-Service
+  - https://github.com/All-Day-I-Dream-About-Schemas/FEC-SideBar-Service
+  - https://github.com/All-Day-I-Dream-About-Schemas/Image-Carousel-Service
+  - https://github.com/All-Day-I-Dream-About-Schemas/Reviews-server
 
 ## Table of Contents
 

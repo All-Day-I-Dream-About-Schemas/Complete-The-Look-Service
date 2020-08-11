@@ -1,9 +1,10 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
+import React, { Component } from 'react';
+import Title from './Title.jsx';
+import ProductList from './ProductList.jsx';
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       value: ""
@@ -23,17 +24,20 @@ class App extends Component {
 
   render() {
     return (
-      <form>
-        <input
-          type="text"
-          value={this.state.value}
-          onChange={this.handleChange}
-        />
-      </form>
+      <div>
+        <Title />
+        <ProductList />
+        <form>
+          <input
+            type="text"
+            value={this.state.value}
+            onChange={this.handleChange}
+          />
+        </form>
+      </div>
     );
   }
 }
 
-export default App;
 
-ReactDOM.render(<App />, document.getElementById("app"))
+export default App;
